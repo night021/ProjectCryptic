@@ -41,12 +41,15 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="bookshelf.cs" />
     <Compile Include="Delay.cs" />
+    <Compile Include="door.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprite.cs" />
+    <Compile Include="table.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
