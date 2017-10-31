@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectCryptic
+namespace ProjectCryptic 
 {
     //For all of Object in Scene
     public class Sprite
@@ -15,10 +15,10 @@ namespace ProjectCryptic
         private Texture2D texture;
         public Vector2 position;
 
-        public int speed = 1;
+        public int speed = 2;
 
         public int posX = 0;
-        public int posY = 0;
+        public int posY = 200;
 
         public Sprite(Texture2D texture2)
         {
@@ -29,7 +29,6 @@ namespace ProjectCryptic
         {
             if(Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-
                 {
                    posX -= speed;
                 }
@@ -37,6 +36,7 @@ namespace ProjectCryptic
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
+
                 posX += speed;
             }
 

@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="bookshelf.cs" />
     <Compile Include="Delay.cs" />
-    <Compile Include="door.cs" />
+    <Compile Include="Door.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="player.cs" />
     <Compile Include="Program.cs" />

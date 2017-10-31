@@ -15,6 +15,7 @@ namespace ProjectCryptic
 
         //Object
         private player player;
+        private Sprite enemy;
 
         public Game1()
         {
@@ -47,10 +48,12 @@ namespace ProjectCryptic
 
             //Player
             player = new player(texture);
+            enemy = new Sprite(texture);
             {
-                player.posX = 400;
-                player.posY = 200;
+                enemy.posX = 600;
             }
+
+
 
             
         }
@@ -63,7 +66,10 @@ namespace ProjectCryptic
         protected override void Update(GameTime gameTime)
         {
             player.Update();
-
+            if(player.playerPosX == 350 || player.playerPosX == 450)
+            {
+                enemy.Update();
+            }
 
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -84,6 +90,7 @@ namespace ProjectCryptic
             
             //Generate player
             player.Draw(spriteBatch);
+            enemy.Draw(spriteBatch);
 
             spriteBatch.End();
 

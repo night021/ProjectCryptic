@@ -17,9 +17,9 @@ namespace ProjectCryptic
         public Vector2 position;
 
         //Movement
-        public int speed = 1;
-        public int posX = 0;
-        public int posY = 0;
+        public int speed = 2;
+        public int playerPosX = 400;
+        public int playerPosY = 200;
 
         //Animation
         string turning = "right";
@@ -34,18 +34,20 @@ namespace ProjectCryptic
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 turning = "right";
-                if (posX >= 350)
+                playerPosX += speed;
+                if (playerPosX >= 450)
                 {
-                    posX -= speed;
+                    playerPosX = 450; 
                 }
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 turning = "left";
-                if (posX <= 450)
+                playerPosX -= speed;
+                if (playerPosX <= 350)
                 {
-                    posX += speed ;
+                    playerPosX = 350;
                 }
             }
 
@@ -53,7 +55,7 @@ namespace ProjectCryptic
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(mainPlayer, destinationRectangle: new Rectangle(posX, posY, 400, 400));
+            spriteBatch.Draw(mainPlayer, destinationRectangle: new Rectangle(playerPosX, playerPosY, 400, 400));
         }
 
     }
